@@ -5,6 +5,11 @@
 # Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
 
 tasks:
-  - init: pip install -r requirements.txt
+  - init: |
+      pip install -r requirements.txt
+      wget https://s3.amazonaws.com/jruby.org/downloads/9.2.7.0/jruby-bin-9.2.7.0.tar.gz
+      sudo mkdir -p /opt/rubies/
+      sudo tar -xzvf jruby-bin-9.2.7.0.tar.gz -C /opt/rubies/
+      sudo ln -s jruby /opt/rubies/jruby-9.2.7.0/bin/ruby
 
 
